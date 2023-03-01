@@ -33,11 +33,11 @@ const KnowledgeForm = (props) => {
   };
 
   return (
-    <form className="flex flex-col gap-y-2" onSubmit={handleSubmit}>
+    <form className="w-[30rem] flex flex-col gap-y-4" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-y-1">
         <label htmlFor="typeMateriel">Type</label>
         <input
-          className="py-2 px-4 border border-lightgray"
+          className="py-2 px-4 border border-gray-500"
           type="text"
           value={type}
           onChange={handleTypeChange}
@@ -46,7 +46,7 @@ const KnowledgeForm = (props) => {
       <div className="flex flex-col gap-y-1">
         <label htmlFor="marque">Marque</label>
         <input
-          className="py-2 px-4 border border-lightgray"
+          className="py-2 px-4 border border-gray-500"
           type="text"
           value={marque}
           onChange={handleMarqueChange}
@@ -55,7 +55,7 @@ const KnowledgeForm = (props) => {
       <div className="flex flex-col gap-y-1">
         <label htmlFor="modele">Modele</label>
         <input
-          className="py-2 px-4 border border-lightgray"
+          className="py-2 px-4 border border-gray-500"
           type="text"
           value={modele}
           onChange={handleModeleChange}
@@ -64,16 +64,14 @@ const KnowledgeForm = (props) => {
       <div className="flex flex-col gap-y-1">
         <label htmlFor="def">Incident</label>
         <input
-          className="py-2 px-4 border border-lightgray"
+          className="py-2 px-4 border border-gray-500"
           type="text"
           value={def}
           onChange={handleDefChange}
         />
       </div>
       <div className="flex justify-end">
-        <button className="px-3 py-1 bg-blue-700 text-blue-200 hover:bg-blue-900 cursor-pointer rounded-md">
-          Submit
-        </button>
+        <button className="btn">Submit</button>
       </div>
     </form>
   );
