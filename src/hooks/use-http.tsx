@@ -1,7 +1,7 @@
 import { useCallback, useContext, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:4000/knowledge";
+const BASE_URL = "http://localhost:4000/v1/knowledge";
 
 const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
