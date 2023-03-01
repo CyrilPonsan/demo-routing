@@ -40,7 +40,7 @@ const KnowledgeForm = (props) => {
           className="py-2 px-4 border border-lightgray"
           type="text"
           value={type}
-          onchange={handleTypeChange}
+          onChange={handleTypeChange}
         />
       </div>
       <div className="flex flex-col gap-y-1">
@@ -49,7 +49,7 @@ const KnowledgeForm = (props) => {
           className="py-2 px-4 border border-lightgray"
           type="text"
           value={marque}
-          onchange={handleMarqueChange}
+          onChange={handleMarqueChange}
         />
       </div>
       <div className="flex flex-col gap-y-1">
@@ -58,7 +58,7 @@ const KnowledgeForm = (props) => {
           className="py-2 px-4 border border-lightgray"
           type="text"
           value={modele}
-          onchange={handleModeleChange}
+          onChange={handleModeleChange}
         />
       </div>
       <div className="flex flex-col gap-y-1">
@@ -67,7 +67,7 @@ const KnowledgeForm = (props) => {
           className="py-2 px-4 border border-lightgray"
           type="text"
           value={def}
-          onchange={handleDefChange}
+          onChange={handleDefChange}
         />
       </div>
       <div className="flex justify-end">

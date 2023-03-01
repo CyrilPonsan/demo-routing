@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import KnowledgeForm from "../components/KnowledgeForm";
+import Solutions from "../components/Solutions";
 import useHttp from "../hooks/use-http";
 
 const HomePage = () => {
   const [solutions, setSolutions] = useState([]);
   const { isLoading, error, sendRequest } = useHttp();
 
-  useEffect(() => {
+  const handleSubmit = (incident) => {
+    console.log(incident);
     const applyData = (data) => {
-      setSolutions(data);
+      setSolutions(data.toto);
     };
     sendRequest(
       {
@@ -17,10 +19,7 @@ const HomePage = () => {
       },
       applyData
     );
-  }, [sendRequest]);
-
-  const handleSubmit = (incident) => {
-    console.log(incident);
+    console.log(solutions);
   };
 
   return (
@@ -28,6 +27,7 @@ const HomePage = () => {
       <h1 className="text-3xl uppercase underline font-bold mt-8">Accueil</h1>
       <div className="h-full flex items-center">
         {solutions.length === 0 && <KnowledgeForm onSubmit={handleSubmit} />}
+        {/*     {solutions.length !== 0 && <Solutions solutions={solutions} />} */}
       </div>
     </div>
   );
